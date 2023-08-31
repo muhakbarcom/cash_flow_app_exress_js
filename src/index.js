@@ -1,6 +1,9 @@
 const express = require("express");
+const usersRoutes = require("./routes/users.js");
 
 const app = express();
+
+app.use("/users", usersRoutes);
 
 app.get("/", (req, res) => {
   res.json({
